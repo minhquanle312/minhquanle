@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+#header-black {
+  clip-path: polygon(0 0, 52% 0, 32% 100%, 0 100%);
+}
+#header-white {
+  clip-path: polygon(52% 0, 100% 0, 100% 100%, 32% 100%);
+}
+
+.title {
+  font-family: Pacifico;
+}
