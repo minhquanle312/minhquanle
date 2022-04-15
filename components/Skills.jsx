@@ -58,7 +58,7 @@ const Skills = () => {
   const renderIcons = icons.map(icon => (
     <div key={icon.name} className='flex items-center justify-center'>
       <svg
-        className={`w-12 h-12 hover:fill-${icon.name} hover:cursor-pointer transition-colors duration-150`}
+        className={`w-12 h-12 hover:fill-[${icon.color}] hover:cursor-pointer transition-colors duration-150`}
       >
         <use xlinkHref={`defs.svg#icon-${icon.name}`}></use>
       </svg>
