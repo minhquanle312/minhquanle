@@ -1,6 +1,5 @@
 import React from 'react'
-// import icon from '../public/defs.svg'
-// javascript-icon: #f7df1e  style="fill: var(--color1, #f7df1e)"
+import styles from '../styles/Skill.module.css'
 
 const icons = [
   {
@@ -52,13 +51,14 @@ const icons = [
     color: '#764abc',
   },
 ]
-// fill-[${icon.color}]  fill-[#abc987]
-const color1 = '#678abc'
+
 const Skills = () => {
   const renderIcons = icons.map(icon => (
     <div key={icon.name} className='flex items-center justify-center'>
       <svg
-        className={`w-12 h-12 hover:fill-[${icon.color}] hover:cursor-pointer transition-colors duration-150`}
+        className={`w-12 h-12 ${
+          styles[icon.name]
+        } hover:cursor-pointer transition-colors duration-150`}
       >
         <use xlinkHref={`defs.svg#icon-${icon.name}`}></use>
       </svg>
