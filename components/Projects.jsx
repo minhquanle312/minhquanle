@@ -66,14 +66,26 @@ const Projects = () => {
   }) => {
     return (
       <div className='flex gap-10 py-10 px-20 h-[28rem] '>
-        <div className='flex border-2 p-4 rounded-lg shadow-xl border-gray-200'>
-          <Image
-            alt={description}
-            src={image}
-            width={550}
-            height={325}
-            quality={100}
-          />
+        <div className='flex tilt-box-wrap'>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+          <span className='t_over'></span>
+
+          <div className='tilt-box border-2 p-4 rounded-lg shadow-xl border-gray-200'>
+            <Image
+              alt={description}
+              src={image}
+              width={550}
+              height={325}
+              quality={100}
+            />
+          </div>
         </div>
         <div className='flex flex-col justify-center gap-5 text-lg'>
           <p>{description}</p>
