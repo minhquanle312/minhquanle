@@ -65,7 +65,7 @@ const About = () => {
   }
 
   return (
-    <div className='mb-24 h-1/2'>
+    <div id='about' className='mb-24 h-1/2'>
       <h2 className='text-center text-5xl py-9'>About me</h2>
       <div className='flex gap-6 max-w-7xl mx-auto px-4'>
         <AboutBlock header='My name is Minh Quan Le.'>{intro}</AboutBlock>

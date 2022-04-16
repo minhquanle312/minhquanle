@@ -4,7 +4,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'pulse-fast': 'pulse 1s infinite cubic-bezier(0.4, 0, 0.6, 1)',
+      },
+    },
   },
   plugins: [],
 }

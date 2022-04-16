@@ -49,7 +49,7 @@ const projects = [
     description: 'Static web use bootstrap',
     img: '/images/aurora.jpeg',
     feature: '',
-    technologyIcons: ['html', 'css', 'javascript'],
+    technologyIcons: ['html', 'css', 'bootstrap'],
     demo: 'https://aurora-grove.vercel.app/',
     source: 'https://github.com/minhquanle312/aurora_grove',
   },
@@ -117,7 +117,7 @@ const Projects = () => {
   }
 
   return (
-    <div className='mb-36 pt-12 pb-16 max-w-7xl mx-auto px-4'>
+    <div id='projects' className=' pt-12 pb-16 max-w-7xl mx-auto px-4'>
       <h2 className='text-center text-5xl mb-14'>Projects</h2>
       <Swiper
         pagination={{

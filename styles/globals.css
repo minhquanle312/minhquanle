@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Rubik, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -21,6 +22,9 @@ a {
 }
 
 @layer components {
+  .reset-input {
+    @apply outline-none p-1 border-2 border-blue-300 rounded-sm w-full;
+  }
   .btn-primary {
     @apply relative z-10 py-1 px-4 font-medium text-lg border-2 cursor-pointer border-black;
     transition: color 300ms ease-in-out;

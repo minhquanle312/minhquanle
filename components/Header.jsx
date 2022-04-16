@@ -1,23 +1,30 @@
 import React from 'react'
 import style from '../styles/Header.module.css'
+import { Link } from 'next/link'
 
-// import galaxyVideo from '../public/video/galaxy.mp4'
-// const galaxyVideo = require('/public/video/galaxy.mp4')
-
-const navList = ['HOME', 'ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT']
+const navList = [
+  { name: 'HOME', section: '#home' },
+  { name: 'ABOUT', section: '#about' },
+  { name: 'SKILLS', section: '#skills' },
+  { name: 'PROJECTS', section: '#projects' },
+  { name: 'CONTACT', section: '#contact' },
+]
+// const navList = ['HOME', 'ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT']
 
 const Header = () => {
-  const Navigation = (
-    <nav className='flex justify-end'>
-      <div className='flex mt-5 mr-10 gap-3'>
-        {navList.map(item => (
-          <button key={item} type='button' className='btn-primary'>
-            {item}
-          </button>
-        ))}
-      </div>
-    </nav>
-  )
+  const Navigation = ({ items }) => {
+    return (
+      <nav className='flex justify-end'>
+        <div className='flex mt-5 mr-10 gap-3'>
+          {items.map(item => (
+            <a key={item.name} className='btn-primary' href={item.section}>
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </nav>
+    )
+  }
 
   const HeaderText = ({ black }) => {
     return (
@@ -34,8 +41,8 @@ const Header = () => {
   }
 
   return (
-    <div className='relative h-screen'>
-      {Navigation}
+    <div id='home' className='relative h-screen'>
+      <Navigation items={navList} />
       <HeaderText black />
       <HeaderText />
     </div>
