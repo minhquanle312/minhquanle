@@ -41,6 +41,44 @@ a {
     @apply text-white;
   }
 
+  .btn-secondary {
+    @apply relative py-1 px-4 font-normal text-lg text-blue-500 overflow-hidden;
+    transition: all 300ms ease-in-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
+  }
+  .btn-secondary:nth-child(1) {
+    filter: hue-rotate(115deg);
+  }
+  .btn-secondary:hover {
+    @apply bg-blue-500 text-gray-200 delay-300;
+    box-shadow: 0 0 50px #3b82f6;
+  }
+
+  .btn-secondary::before {
+    @apply border-t-2 border-t-blue-500 border-l-2 border-l-blue-500 transition-all duration-300;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+  }
+  .btn-secondary:hover::before,
+  .btn-secondary:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-secondary::after {
+    @apply border-b-2 border-b-blue-500 border-r-2 border-r-blue-500 transition-all duration-300;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+  }
+
   .landmark-circle {
     @apply relative before:content-[attr(before)] before:absolute before:top-1/2 before:-left-4 before:w-3 before:h-3 before:-translate-y-1/2 before:border-[3px] before:border-blue-500 before:rounded-full;
   }

@@ -66,8 +66,8 @@ const Skills = () => {
   ))
 
   return (
-    <div className='mb-36 h-1/2 bg-gray-300'>
-      <h2 className='text-center text-5xl py-9 mb-8'>Skill</h2>
+    <div className='pt-12 pb-16 h-1/2 bg-blue-50'>
+      <h2 className='text-center text-5xl mb-14'>Skill</h2>
       <div className='grid grid-cols-6 gap-y-20'>{renderIcons}</div>
     </div>
   )
@@ -91,4 +91,5 @@ export default Skills
   sass: #c69
   css: #1572b6
   redux: #764abc
+  firebase: #ffca28
 */
