@@ -69,6 +69,8 @@ const Contact = () => {
     </div>
   )
 
+  const formRef = useRef()
+
   const emailInputRef = useRef()
   const nameInputRef = useRef()
   const subjectInputRef = useRef()
@@ -81,11 +83,6 @@ const Contact = () => {
     const nameValue = nameInputRef.current?.value
     const subjectValue = subjectInputRef.current?.value
     const messageValue = messageInputRef.current?.value
-
-    console.log(emailValue)
-    console.log(nameValue)
-    console.log(subjectValue)
-    console.log(messageValue)
 
     fetch('https://formsubmit.co/ajax/minhquanle312@gmail.com', {
       method: 'POST',
@@ -100,6 +97,8 @@ const Contact = () => {
         message: messageValue,
       }),
     }).then(response => response.json())
+
+    formRef.current.reset()
   }
 
   return (
@@ -115,7 +114,7 @@ const Contact = () => {
         </div>
         <div className='flex flex-col'>
           <h2 className='text-center text-3xl mb-10'>Mail to me</h2>
-          <form className='flex flex-col gap-3'>
+          <form ref={formRef} className='flex flex-col gap-3'>
             <input
               type='email'
               placeholder='Email'
