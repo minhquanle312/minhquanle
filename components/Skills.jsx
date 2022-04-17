@@ -1,4 +1,6 @@
 import React from 'react'
+import Icon from './Icon'
+
 import styles from '../styles/Skill.module.css'
 
 const icons = [
@@ -55,13 +57,14 @@ const icons = [
 const Skills = () => {
   const renderIcons = icons.map(icon => (
     <div key={icon.name} className='flex items-center justify-center'>
-      <svg
+      {/* <svg
         className={`w-12 h-12 ${
           styles[icon.name]
         } hover:cursor-pointer transition-colors duration-150`}
       >
         <use xlinkHref={`defs.svg#icon-${icon.name}`}></use>
-      </svg>
+      </svg> */}
+      <Icon iconName={icon.name} popup />
     </div>
   ))
 
@@ -74,22 +77,3 @@ const Skills = () => {
 }
 
 export default Skills
-
-// * Default color for icon:
-/* 
-  nextjs, expressjs: #000
-  gmail: #d14836
-  facebook: #1877f2
-  linkedin: #0077b5
-  react: #61dafb
-  mongodb: #47a248
-  npm: #cb3837
-  javascript: #f7df1e
-  bootstrap: #563d7c
-  html: #e34f26
-  tailwindcss: #38b2ac
-  sass: #c69
-  css: #1572b6
-  redux: #764abc
-  firebase: #ffca28
-*/

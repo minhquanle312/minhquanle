@@ -10,6 +10,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import Link from 'next/link'
+import Icon from './Icon'
 
 const projects = [
   {
@@ -67,15 +68,9 @@ const Projects = () => {
     return (
       <div className='flex gap-10 py-10 px-20 h-[28rem] '>
         <div className='flex tilt-box-wrap'>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
-          <span className='t_over'></span>
+          {Array.from({ length: 9 }, (_, i) => (
+            <span key={i} className='t_over'></span>
+          ))}
 
           <div className='tilt-box border-2 p-4 rounded-lg shadow-xl border-gray-200'>
             <Image
@@ -90,13 +85,17 @@ const Projects = () => {
         <div className='flex flex-col justify-center gap-5 text-lg'>
           <p>{description}</p>
           <p>{feature}</p>
-          <div className='flex gap-4'>
+          <div className='flex gap-10 mt-5'>
             {icons.map(icon => (
-              <div key={icon} className='flex items-center justify-center'>
-                <svg className={`w-8 h-8 ${styles[icon]}`}>
-                  <use xlinkHref={`defs.svg#icon-${icon}`}></use>
-                </svg>
-              </div>
+              <Icon
+                key={icon}
+                iconName={icon}
+                color
+                width='8'
+                height='8'
+                popup
+                className=''
+              />
             ))}
           </div>
           <div className='flex gap-8'>

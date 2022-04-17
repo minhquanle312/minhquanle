@@ -1,6 +1,5 @@
 import React from 'react'
 import style from '../styles/Header.module.css'
-import { Link } from 'next/link'
 import AutoScrollSlider from './AutoScrollSlider'
 
 const navList = [
@@ -10,22 +9,31 @@ const navList = [
   { name: 'PROJECTS', section: '#projects' },
   { name: 'CONTACT', section: '#contact' },
 ]
-// const navList = ['HOME', 'ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT']
 
 const Header = () => {
   const Navigation = ({ items }) => {
     return (
-      <nav className='flex justify-end'>
-        <div className='flex mt-5 mr-10 gap-3'>
-          {items.map(item => (
-            <a key={item.name} className='btn-primary' href={item.section}>
-              {item.name}
-            </a>
-          ))}
-        </div>
+      <nav className='flex gap-5 pr-5 items-center justify-end z-10 fixed top-0 left-0 right-0 h-20'>
+        {items.map(item => (
+          <a key={item.name} className='btn-primary' href={item.section}>
+            {item.name}
+          </a>
+        ))}
       </nav>
     )
   }
+  // const Navigation = ({ items, black }) => {
+  //   const classes = `flex gap-5 pr-5 items-center justify-end z-10 fixed top-0 left-0 right-0 h-20`
+  //   return (
+  //     <nav className={classes}>
+  //       {items.map(item => (
+  //         <a key={item.name} className='btn-primary' href={item.section}>
+  //           {item.name}
+  //         </a>
+  //       ))}
+  //     </nav>
+  //   )
+  // }
 
   const HeaderText = ({ black }) => {
     return (
@@ -46,7 +54,7 @@ const Header = () => {
       <Navigation items={navList} />
       <HeaderText black />
       <HeaderText />
-      <AutoScrollSlider className='absolute top-0 right-0 bottom-0 w-1/2' />
+      <AutoScrollSlider className='absolute top-0 right-0 bottom-0 w-1/2 -z-10' />
     </div>
   )
 }

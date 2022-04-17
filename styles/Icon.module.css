@@ -1,0 +1,97 @@
+.html:hover {
+  fill: #e34f26;
+}
+.css:hover {
+  fill: #1572b6;
+}
+.javascript:hover {
+  fill: #dbc233;
+}
+.npm:hover {
+  fill: #cb3837;
+}
+.react:hover {
+  fill: #61dafb;
+}
+.bootstrap:hover {
+  fill: #563d7c;
+}
+.tailwindcss:hover {
+  fill: #38b2ac;
+}
+.mongodb:hover {
+  fill: #47a248;
+}
+.expressjs:hover {
+  fill: #000;
+}
+.nextjs:hover {
+  fill: #000;
+}
+.sass:hover {
+  fill: #cc6699;
+}
+.redux:hover {
+  fill: #764abc;
+}
+.gmail:hover {
+  fill: #d14836;
+}
+.facebook:hover {
+  fill: #1877f2;
+}
+.linkedin:hover {
+  fill: #0077b5;
+}
+.firebase:hover {
+  fill: #ffca28;
+}
+
+.htmlColor {
+  fill: #e34f26;
+}
+.cssColor {
+  fill: #1572b6;
+}
+.javascriptColor {
+  fill: #dbc233;
+}
+.npmColor {
+  fill: #cb3837;
+}
+.reactColor {
+  fill: #61dafb;
+}
+.bootstrapColor {
+  fill: #563d7c;
+}
+.tailwindcssColor {
+  fill: #38b2ac;
+}
+.mongodbColor {
+  fill: #47a248;
+}
+.expressjsColor {
+  fill: #000;
+}
+.nextjsColor {
+  fill: #000;
+}
+.sassColor {
+  fill: #cc6699;
+}
+.reduxColor {
+  fill: #764abc;
+}
+.gmailColor {
+  fill: #d14836;
+}
+.facebookColor {
+  fill: #1877f2;
+}
+.linkedinColor {
+  fill: #0077b5;
+}
+.firebaseColor {
+  fill: #ffca28;
+}

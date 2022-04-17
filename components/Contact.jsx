@@ -1,7 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 
 import styles from '../styles/Contact.module.css'
+
 import Link from 'next/link'
+import Icon from './Icon'
 
 const contactList = [
   {
@@ -42,27 +44,37 @@ const socialList = [
 const Contact = () => {
   const renderContact = contactList.map(item => (
     <div key={item.name} className='flex gap-6 text-lg'>
-      <div>
+      {/* <div>
         <svg className={`w-7 h-7 ${styles[item.icon]}`}>
           <use xlinkHref={`defs.svg#icon-${item.icon}`}></use>
         </svg>
-      </div>
+      </div> */}
+      <Icon iconName={item.icon} color width='7' height='7' />
       <p>{item.name}</p>
       <p className='text-gray-500'>{item.content}</p>
     </div>
   ))
+
   const renderSocial = (
     <div className='flex gap-10 mt-10'>
       {socialList.map(item => (
         <Link href={item.url} key={item.name}>
           <a target='_blank' rel='noreferrer'>
-            <svg
+            {/* <svg
               className={`w-10 h-10 ${
                 styles[item.icon]
               } hover:animate-pulse-fast hover:scale-110 transition-all duration-75`}
             >
               <use xlinkHref={`defs.svg#icon-${item.icon}`}></use>
-            </svg>
+            </svg> */}
+            <Icon
+              iconName={item.icon}
+              className='hover:animate-pulse-fast hover:scale-110 transition-all duration-75'
+              width='10'
+              height='10'
+              color
+              popup
+            />
           </a>
         </Link>
       ))}
