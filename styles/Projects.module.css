@@ -38,16 +38,16 @@
   fill: #ffca28;
 }
 
-.image-container {
+.imageContainer {
   position: relative;
   width: 50%;
 }
 
-.image-container > div {
+.imageContainer > div {
   position: unset !important;
 }
 
-.image-container .image {
+.imageContainer .image {
   object-fit: contain;
   width: 50% !important;
   position: relative !important;

@@ -123,6 +123,8 @@ const Projects = () => {
         pagination={{
           type: 'progressbar',
         }}
+        autoplay={true}
+        loop={true}
         navigation={true}
         modules={[Pagination, Navigation]}
         className='mySwiper'

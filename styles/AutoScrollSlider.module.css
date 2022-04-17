@@ -1,0 +1,106 @@
+/* * Image styles with container: START */
+.imageContainer {
+  position: relative;
+  width: 50%;
+}
+
+.imageContainer > div {
+  position: unset !important;
+}
+
+.imageContainer .image {
+  object-fit: contain;
+  width: 50% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+/* * Image styles with container: END */
+
+.slider {
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: calc(50px * 12);
+  animation: scroll 30s linear infinite;
+}
+
+.sliderTrackReverse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: calc(50px * 6);
+  animation: scrollReverse 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-50px * 12));
+  }
+}
+
+@keyframes scrollReverse {
+  0% {
+    transform: translateY(calc(-50px * 6));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* .slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+} */
+
+/* img {
+  width: 100%;
+} */
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  right: 0;
+  top: 0;
+  width: 90%;
+}
+
+.slider::after {
+  right: 0;
+  bottom: 0;
+  transform: rotateZ(180deg);
+}

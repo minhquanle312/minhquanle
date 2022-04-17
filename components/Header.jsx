@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../styles/Header.module.css'
 import { Link } from 'next/link'
+import AutoScrollSlider from './AutoScrollSlider'
 
 const navList = [
   { name: 'HOME', section: '#home' },
@@ -45,6 +46,7 @@ const Header = () => {
       <Navigation items={navList} />
       <HeaderText black />
       <HeaderText />
+      <AutoScrollSlider className='absolute top-0 right-0 bottom-0 w-1/2' />
     </div>
   )
 }
