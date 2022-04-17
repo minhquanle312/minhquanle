@@ -85,16 +85,24 @@ const Projects = () => {
         <div className='flex flex-col justify-center gap-5 text-lg'>
           <p>{description}</p>
           <p>{feature}</p>
-          <div className='flex gap-10 mt-5'>
+          {/* <div className='flex gap-10 mt-5'>
             {icons.map(icon => (
+              <div key={icon} className='flex items-center justify-center'>
+                <svg className={`w-8 h-8 ${styles[icon]}`}>
+                  <use xlinkHref={`defs.svg#icon-${icon}`}></use>
+                </svg>
+              </div>
+            ))}
+          </div> */}
+          <div className='flex gap-10 mt-5'>
+            {icons.map((icon, index) => (
               <Icon
-                key={icon}
+                key={index}
                 iconName={icon}
                 color
                 width='8'
                 height='8'
                 popup
-                className=''
               />
             ))}
           </div>
