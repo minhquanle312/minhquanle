@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import styles from '../styles/Contact.module.css'
+// import styles from '../styles/Contact.module.css'
 
 import Link from 'next/link'
 import Icon from './Icon'

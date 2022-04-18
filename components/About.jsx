@@ -1,5 +1,6 @@
 import React from 'react'
 
+// eslint-disable-next-line react/display-name
 const About = () => {
   const Circle = ({ fill }) => {
     return (

@@ -35,13 +35,9 @@ const AutoScrollSlider = ({ className }) => {
   }
 
   return (
-    <div className={`flex place-items-center min-h-screen ${className}`}>
-      {/* <div className={styles.slider}>
-        <div className={styles.sliderTrack}>
-          <ImagesSlider imageList={imageLink} />
-          <ImagesSlider imageList={imageLink} />
-        </div>
-      </div> */}
+    <div
+      className={`flex overflow-hidden place-items-center min-h-screen ${className}`}
+    >
       <div className={styles.slider}>
         <div className={styles.sliderTrackReverse}>
           <ImagesSlider imageList={imageLink2} />

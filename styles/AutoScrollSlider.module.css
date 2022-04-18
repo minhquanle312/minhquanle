@@ -13,6 +13,7 @@
   width: 50% !important;
   position: relative !important;
   height: unset !important;
+  /* position: relative; */
 }
 
 /* * Image styles with container: END */
@@ -32,7 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   width: 100%;
   height: calc(50px * 12);
   animation: scroll 30s linear infinite;
@@ -43,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   width: 100%;
   height: calc(50px * 6);
   animation: scrollReverse 30s linear infinite;
@@ -65,42 +66,4 @@
   100% {
     transform: translateY(0);
   }
-}
-
-/* .slide {
-  height: 200px;
-  width: 250px;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-} */
-
-/* img {
-  width: 100%;
-} */
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  content: '';
-  width: 100%;
-  position: absolute;
-  height: 15%;
-  z-index: 2;
-}
-
-.slider::before {
-  right: 0;
-  top: 0;
-  width: 90%;
-}
-
-.slider::after {
-  right: 0;
-  bottom: 0;
-  transform: rotateZ(180deg);
 }

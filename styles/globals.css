@@ -25,14 +25,25 @@ a {
   .reset-input {
     @apply outline-none p-1 border-2 border-blue-300 rounded-sm w-full;
   }
+
+  /* .clip-path-black {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  } */
+  .clip-path-black {
+    clip-path: polygon(0 0, 52% 0, 32% 100%, 0 100%);
+  }
+  .clip-path-white {
+    clip-path: polygon(52% 0, 100% 0, 100% 100%, 32% 100%);
+  }
+
   .btn-primary {
-    @apply relative z-10 py-1 px-4 font-medium text-lg border-2 cursor-pointer border-black;
+    @apply relative z-10 py-1 px-4 font-medium text-lg border-2 cursor-pointer bg-black border-white text-white;
     transition: color 300ms ease-in-out;
   }
 
   .btn-primary::before {
     content: '';
-    @apply absolute inset-[2px] bg-black -z-10 scale-x-0;
+    @apply absolute inset-[2px] bg-white -z-10 scale-x-0;
     transform-origin: left;
     transition: transform 300ms ease-in-out;
   }
@@ -42,7 +53,7 @@ a {
   }
 
   .btn-primary:hover {
-    @apply text-white;
+    @apply text-black;
   }
 
   .btn-secondary {
