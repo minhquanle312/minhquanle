@@ -23,7 +23,7 @@ a {
 
 @layer components {
   .reset-input {
-    @apply outline-none p-1 border-2 border-blue-300 rounded-sm w-full;
+    @apply outline-none text-xl px-2 py-1 border-2 border-blue-300 dark:border-blue-600 rounded-sm w-full dark:text-slate-700;
   }
 
   /* .clip-path-black {
@@ -37,13 +37,13 @@ a {
   }
 
   .btn-primary {
-    @apply relative z-10 py-1 px-4 font-medium text-lg border-2 cursor-pointer bg-black border-white text-white;
+    @apply relative z-10 py-1 px-4 font-medium text-lg border-2 cursor-pointer bg-white border-black text-black dark:bg-black dark:border-white dark:text-white;
     transition: color 300ms ease-in-out;
   }
 
   .btn-primary::before {
     content: '';
-    @apply absolute inset-[2px] bg-white -z-10 scale-x-0;
+    @apply absolute inset-[2px] bg-black dark:bg-white -z-10 scale-x-0;
     transform-origin: left;
     transition: transform 300ms ease-in-out;
   }
@@ -53,7 +53,7 @@ a {
   }
 
   .btn-primary:hover {
-    @apply text-black;
+    @apply text-white dark:text-black;
   }
 
   .btn-secondary {

@@ -124,7 +124,10 @@ const Projects = () => {
   }
 
   return (
-    <div id='projects' className=' pt-12 pb-16 max-w-7xl mx-auto px-4'>
+    <div
+      id='projects'
+      className='pt-12 pb-16 px-4 dark:bg-slate-700 dark:text-slate-100 transition-colors duration-200'
+    >
       <h2 className='text-center text-5xl mb-14'>Projects</h2>
       <Swiper
         pagination={{

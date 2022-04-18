@@ -31,7 +31,7 @@ const Icon = ({
       onMouseLeave={handleMouseLeave}
     >
       {popup && showPopup && (
-        <div className='absolute -top-11 left-0 bg-orange-100 py-1 px-3 rounded-md shadow-sm text-center'>
+        <div className='absolute -top-11 left-0 bg-orange-100 dark:text-slate-800 py-1 px-3 rounded-md shadow-sm text-center'>
           {iconName.toUpperCase()}
         </div>
       )}

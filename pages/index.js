@@ -21,7 +21,7 @@ const Home = () => {
       localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
+      localStorage.removeItem('theme')
     }
   }, [theme])
 

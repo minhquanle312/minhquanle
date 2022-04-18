@@ -37,7 +37,7 @@ const Header = () => {
   const HeaderText = ({ black }) => {
     return (
       <h2
-        className={`absolute flex flex-col gap-7 inset-0 pl-[25%] justify-center text-5xl ${
+        className={`absolute flex flex-col gap-7 inset-0 text-center sm:text-left sm:pl-8 md:pl-44 lg:pl-[25%] justify-center text-5xl transition-all duration-300 ${
           black ? 'bg-black text-white clip-path-black' : 'clip-path-white'
         }`}
       >
@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <div
       id='home'
-      className='relative h-screen dark:bg-slate-500 transition-colors duration-300'
+      className='relative h-screen dark:bg-slate-500 transition-all duration-300'
       ref={headerRef}
     >
       <Navigation items={navList} fixed={!headerIsInview} />

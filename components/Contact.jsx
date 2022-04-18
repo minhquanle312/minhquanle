@@ -51,7 +51,7 @@ const Contact = () => {
       </div> */}
       <Icon iconName={item.icon} color width='7' height='7' />
       <p>{item.name}</p>
-      <p className='text-gray-500'>{item.content}</p>
+      <p className='text-gray-500 dark:text-slate-300'>{item.content}</p>
     </div>
   ))
 
@@ -114,7 +114,10 @@ const Contact = () => {
   }
 
   return (
-    <div id='contact' className='pb-28 pt-16 bg-blue-50'>
+    <div
+      id='contact'
+      className='pb-28 pt-16 bg-blue-50 dark:bg-slate-500 dark:text-slate-100 transition-colors duration-200'
+    >
       <h2 className='text-center text-5xl mb-14'>Contact</h2>
       <div className='grid grid-cols-2 gap-3 max-w-7xl mx-auto px-20'>
         <div>

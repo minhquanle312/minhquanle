@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import styles from '../styles/AutoScrollSlider.module.css'
+import { debounce } from '../utils'
 
 const imageLink = [
   '/images/aurora.jpeg',
@@ -34,9 +35,29 @@ const AutoScrollSlider = ({ className }) => {
     ))
   }
 
+  const [windowWidth, setWindowWidth] = useState(null)
+
+  // * Link resize window in react: https://www.pluralsight.com/guides/re-render-react-component-on-window-resize
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const debouncedHandleResize = debounce(function handleResize() {
+        setWindowWidth(window.innerWidth)
+      }, 50)
+
+      window.addEventListener('resize', debouncedHandleResize)
+
+      // NOTE: Cleanup function
+      return _ => {
+        window.removeEventListener('resize', debouncedHandleResize)
+      }
+    }
+  })
+
   return (
     <div
-      className={`flex overflow-hidden place-items-center min-h-screen ${className}`}
+      className={`${
+        windowWidth < 640 && 'hidden'
+      } md:flex overflow-hidden place-items-center min-h-screen ${className}`}
     >
       <div className={styles.slider}>
         <div className={styles.sliderTrackReverse}>
@@ -44,7 +65,7 @@ const AutoScrollSlider = ({ className }) => {
           <ImagesSlider imageList={imageLink2} />
         </div>
       </div>
-      <div className={styles.slider}>
+      <div className={`${styles.slider} ${windowWidth < 1024 && 'hidden'}`}>
         <div className={styles.sliderTrack}>
           <ImagesSlider imageList={imageLink} />
           <ImagesSlider imageList={imageLink} />

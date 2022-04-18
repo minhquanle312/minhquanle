@@ -13,7 +13,7 @@ const About = () => {
   }
 
   const intro = (
-    <p className='text-gray-600'>
+    <p className='text-gray-600 dark:text-slate-400'>
       <span className='block mb-3'>
         I&apos;m on the way to becoming a Frontend developer. I spent last year
         to focus on learning HTML, CSS, Javascript, ReactJS and many useful
@@ -37,22 +37,27 @@ const About = () => {
 
   const experience = (
     <ul>
-      <li className='flex gap-2 connected-line'>
+      <li className='flex gap-2'>
         <Circle fill />
-        <p className=' mb-3'>
-          <span className=''>
+        <p className='mb-3'>
+          {/* <span className=''>
             Do you want to be the first person fill this section?
           </span>
           <br />
-          <span>Let&apos;s contact me</span>
+          <span>Let&apos;s contact me</span> */}
+          My{' '}
+          <a href='#projects' className='text-blue-500'>
+            personal projects
+          </a>{' '}
+          below.
         </p>
       </li>
-      <li className='flex gap-2'>
+      {/* <li className='flex gap-2'>
         <Circle />
         <p>
           <span className=''>What&apos;next?</span>
         </p>
-      </li>
+      </li> */}
     </ul>
   )
 
@@ -66,7 +71,10 @@ const About = () => {
   }
 
   return (
-    <div id='about' className='mb-24 h-1/2'>
+    <div
+      id='about'
+      className='pb-24 h-1/2 dark:bg-slate-700 dark:text-slate-100 transition-colors duration-100'
+    >
       <h2 className='text-center text-5xl py-9'>About me</h2>
       <div className='flex gap-6 max-w-7xl mx-auto px-4'>
         <AboutBlock header='My name is Minh Quan Le.'>{intro}</AboutBlock>

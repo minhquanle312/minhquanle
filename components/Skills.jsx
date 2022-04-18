@@ -69,8 +69,11 @@ const Skills = () => {
   ))
 
   return (
-    <div id='skills' className='pt-12 pb-16 h-1/2 bg-blue-50'>
-      <h2 className='text-center text-5xl mb-14'>Skill</h2>
+    <div
+      id='skills'
+      className='pt-12 pb-16 h-1/2 bg-blue-50 dark:bg-slate-500 transition-colors duration-200'
+    >
+      <h2 className='text-center text-5xl mb-14 dark:text-slate-100'>Skill</h2>
       <div className='grid grid-cols-6 gap-y-20'>{renderIcons}</div>
     </div>
   )
