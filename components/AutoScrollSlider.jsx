@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import styles from '../styles/AutoScrollSlider.module.css'
 import { debounce } from '../utils'
+import useResizeWidth from '../hooks/useResizeWidth.js'
 
 const imageLink = [
   '/images/aurora.jpeg',
@@ -35,28 +36,12 @@ const AutoScrollSlider = ({ className }) => {
     ))
   }
 
-  const [windowWidth, setWindowWidth] = useState(null)
-
-  // * Link resize window in react: https://www.pluralsight.com/guides/re-render-react-component-on-window-resize
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const debouncedHandleResize = debounce(function handleResize() {
-        setWindowWidth(window.innerWidth)
-      }, 50)
-
-      window.addEventListener('resize', debouncedHandleResize)
-
-      // NOTE: Cleanup function
-      return _ => {
-        window.removeEventListener('resize', debouncedHandleResize)
-      }
-    }
-  })
+  const { windowWidth } = useResizeWidth()
 
   return (
     <div
       className={`${
-        windowWidth < 640 && 'hidden'
+        windowWidth < 700 && 'hidden'
       } md:flex overflow-hidden place-items-center min-h-screen ${className}`}
     >
       <div className={styles.slider}>

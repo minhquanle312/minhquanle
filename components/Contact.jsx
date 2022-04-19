@@ -43,7 +43,7 @@ const socialList = [
 
 const Contact = () => {
   const renderContact = contactList.map(item => (
-    <div key={item.name} className='flex gap-6 text-lg'>
+    <div key={item.name} className='flex gap-6 text-base md:text-lg'>
       {/* <div>
         <svg className={`w-7 h-7 ${styles[item.icon]}`}>
           <use xlinkHref={`defs.svg#icon-${item.icon}`}></use>
@@ -56,7 +56,7 @@ const Contact = () => {
   ))
 
   const renderSocial = (
-    <div className='flex gap-10 mt-10'>
+    <div className='flex justify-center md:justify-start gap-10 mt-5 md:mt-10'>
       {socialList.map(item => (
         <Link href={item.url} key={item.name}>
           <a target='_blank' rel='noreferrer'>
@@ -119,9 +119,11 @@ const Contact = () => {
       className='pb-28 pt-16 bg-blue-50 dark:bg-slate-500 dark:text-slate-100 transition-colors duration-200'
     >
       <h2 className='text-center text-5xl mb-14'>Contact</h2>
-      <div className='grid grid-cols-2 gap-3 max-w-7xl mx-auto px-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-3 max-w-7xl mx-auto px-6 md:px-20'>
         <div>
-          <h2 className='text-center text-3xl mb-10'>Contact Information</h2>
+          <h2 className='text-center text-2xl md:text-3xl mb-10'>
+            Contact Information
+          </h2>
           <div className='flex flex-col gap-3'>
             {renderContact}
             {renderSocial}

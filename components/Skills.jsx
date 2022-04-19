@@ -16,10 +16,10 @@ const icons = [
     name: 'javascript',
     color: '#f7df1e',
   },
-  {
-    name: 'npm',
-    color: '#cb3837',
-  },
+  // {
+  //   name: 'npm',
+  //   color: '#cb3837',
+  // },
   {
     name: 'react',
     color: '#61dafb',
@@ -32,10 +32,10 @@ const icons = [
     name: 'tailwindcss',
     color: '#38b2ac',
   },
-  {
-    name: 'mongodb',
-    color: '#47a248',
-  },
+  // {
+  //   name: 'mongodb',
+  //   color: '#47a248',
+  // },
   {
     name: 'expressjs',
     color: '#000',
@@ -74,7 +74,9 @@ const Skills = () => {
       className='pt-12 pb-16 h-1/2 bg-blue-50 dark:bg-slate-500 transition-colors duration-200'
     >
       <h2 className='text-center text-5xl mb-14 dark:text-slate-100'>Skill</h2>
-      <div className='grid grid-cols-6 gap-y-20'>{renderIcons}</div>
+      <div className='grid grid-cols-2 md:grid-cols-5 gap-y-20'>
+        {renderIcons}
+      </div>
     </div>
   )
 }

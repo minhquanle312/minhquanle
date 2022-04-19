@@ -63,7 +63,7 @@ const About = () => {
 
   const AboutBlock = ({ children, header }) => {
     return (
-      <div className='h-72 text-xl p-5 basis-1/3 hover:basis-2/3 hover:border-2 hover:shadow-2xl rounded-2xl transition-all duration-500  overflow-ellipsis overflow-hidden'>
+      <div className='h-72 text-xl p-5 basis-1/3 lg:hover:basis-2/3 hover:border-2 hover:shadow-2xl rounded-2xl transition-all duration-[350ms]  overflow-ellipsis overflow-hidden'>
         <h3 className='text-3xl mb-3'>{header}</h3>
         {children}
       </div>
@@ -76,7 +76,7 @@ const About = () => {
       className='pb-24 h-1/2 dark:bg-slate-700 dark:text-slate-100 transition-colors duration-100'
     >
       <h2 className='text-center text-5xl py-9'>About me</h2>
-      <div className='flex gap-6 max-w-7xl mx-auto px-4'>
+      <div className='flex flex-col lg:flex-row gap-6 max-w-7xl mx-auto px-4'>
         <AboutBlock header='My name is Minh Quan Le.'>{intro}</AboutBlock>
         <AboutBlock header='Education'>{education}</AboutBlock>
         <AboutBlock header='Experience'>{experience}</AboutBlock>

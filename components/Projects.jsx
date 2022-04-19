@@ -66,7 +66,7 @@ const Projects = () => {
     sourceURL,
   }) => {
     return (
-      <div className='flex gap-10 py-10 px-20 h-[28rem] '>
+      <div className='flex flex-col lg:flex-row gap-10 py-10 px-20 h-3/5 '>
         <div className='flex tilt-box-wrap'>
           {Array.from({ length: 9 }, (_, i) => (
             <span key={i} className='t_over'></span>

@@ -9,6 +9,7 @@ const Icon = ({
   iconName,
   color = false,
   popup = false,
+  onClick,
 }) => {
   const classes = `w-${width} h-${height} ${
     color ? styles[`${iconName}Color`] : styles[iconName]
@@ -29,6 +30,7 @@ const Icon = ({
       className='relative'
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       {popup && showPopup && (
         <div className='absolute -top-11 left-0 bg-orange-100 dark:text-slate-800 py-1 px-3 rounded-md shadow-sm text-center'>
