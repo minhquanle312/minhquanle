@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 
 import styles from '../styles/AutoScrollSlider.module.css'
-import { debounce } from '../utils'
-import useResizeWidth from '../hooks/useResizeWidth.js'
 
 const imageLink = [
   '/images/aurora.jpeg',
@@ -36,13 +34,9 @@ const AutoScrollSlider = ({ className }) => {
     ))
   }
 
-  const { windowWidth } = useResizeWidth()
-
   return (
     <div
-      className={`${
-        windowWidth < 700 && 'hidden'
-      } md:flex overflow-hidden place-items-center min-h-screen ${className}`}
+      className={`${styles.hiddenElement} md:flex overflow-hidden place-items-center min-h-screen ${className}`}
     >
       <div className={styles.slider}>
         <div className={styles.sliderTrackReverse}>
@@ -50,7 +44,7 @@ const AutoScrollSlider = ({ className }) => {
           <ImagesSlider imageList={imageLink2} />
         </div>
       </div>
-      <div className={`${styles.slider} ${windowWidth < 1024 && 'hidden'}`}>
+      <div className={`${styles.slider}`}>
         <div className={styles.sliderTrack}>
           <ImagesSlider imageList={imageLink} />
           <ImagesSlider imageList={imageLink} />

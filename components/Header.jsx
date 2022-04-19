@@ -4,6 +4,7 @@ import AutoScrollSlider from './AutoScrollSlider'
 import { useInView } from 'react-intersection-observer'
 import useResizeWidth from './../hooks/useResizeWidth'
 import Icon from './Icon'
+import Link from 'next/link'
 
 const navList = [
   { name: 'HOME', section: '#home' },
@@ -115,13 +116,23 @@ const Header = () => {
       <button
         type='button'
         className={`${
-          !headerIsInview ? 'fixed bottom-7 right-7' : ''
+          !headerIsInview ? 'fixed bottom-7 right-7' : 'hidden'
         } flex justify-center items-center z-10 p-2 bg-slate-200 border-[3px] border-slate-600 rounded-full shadow-sm hover:-translate-y-2 transition-transform duration-300`}
       >
         <a href='#home'>
           <Icon iconName='arrow-up' width='7' height='7' />
         </a>
       </button>
+      <div className='absolute top-20 left-6 flex flex-col md:flex-row gap-5'>
+        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150'>
+          <a href='/Intern_Frontend-Le_Phuc_Minh_Quan.pdf' download>
+            Download my CV
+          </a>
+        </button>
+        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150'>
+          <Link href='/myCV'>My online CV</Link>
+        </button>
+      </div>
     </div>
   )
 }

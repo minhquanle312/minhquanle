@@ -22,7 +22,7 @@ const useResizeWidth = (bouncingTime = 100) => {
         window.removeEventListener('resize', debouncedHandleResize)
       }
     }
-  }, [bouncingTime])
+  })
 
   return { windowWidth }
 }
