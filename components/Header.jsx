@@ -59,9 +59,9 @@ const Header = () => {
           iconName='bar'
           width='12'
           height='12'
-          className={`relative z-10 ${
-            fixed && 'fill-black dark:fill-white'
-          } fill-white p-3`}
+          className={`relative z-10 p-3 ${
+            fixed ? 'fill-black dark:fill-white' : 'fill-white'
+          }`}
           onClick={handleClickIcon}
         />
         <div
@@ -72,11 +72,11 @@ const Header = () => {
           {items.map(item => (
             <a
               key={item.name}
-              className={`p-3 ${
+              className={`p-3 font-medium transition-colors duration-200 ${
                 fixed
                   ? 'text-black hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-800'
-                  : 'hover:bg-white dark:hover:bg-slate-500 dark:hover:text-slate-100'
-              } text-white font-medium hover:text-black transition-colors duration-200`}
+                  : 'text-white hover:bg-white hover:text-black dark:hover:bg-slate-500 dark:hover:text-slate-100'
+              }`}
               href={item.section}
             >
               {item.name}
@@ -123,13 +123,13 @@ const Header = () => {
           <Icon iconName='arrow-up' width='7' height='7' />
         </a>
       </button>
-      <div className='absolute top-20 left-6 flex flex-col md:flex-row gap-5'>
-        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150'>
+      <div className='absolute top-2/3 left-20 sm:left-10 md:top-20 md:left-6 flex gap-5'>
+        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
           <a href='/Intern_Frontend-Le_Phuc_Minh_Quan.pdf' download>
             Download my CV
           </a>
         </button>
-        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150'>
+        <button className='py-1 px-2 text-sm md:text-md bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
           <Link href='/myCV'>My online CV</Link>
         </button>
       </div>
