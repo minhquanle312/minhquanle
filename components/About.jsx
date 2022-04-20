@@ -1,16 +1,17 @@
 import React from 'react'
+import Circle from './Circle'
 
 // eslint-disable-next-line react/display-name
 const About = () => {
-  const Circle = ({ fill }) => {
-    return (
-      <div
-        className={`${
-          fill ? 'bg-blue-500' : ''
-        } w-3 h-3 mt-2 shrink-0 rounded-full border-[3px] border-blue-500`}
-      ></div>
-    )
-  }
+  // const Circle = ({ fill }) => {
+  //   return (
+  //     <div
+  //       className={`${
+  //         fill ? 'bg-blue-500' : ''
+  //       } w-3 h-3 mt-2 shrink-0 rounded-full border-[3px] border-blue-500`}
+  //     ></div>
+  //   )
+  // }
 
   const intro = (
     <p className='text-gray-600 dark:text-slate-400'>
