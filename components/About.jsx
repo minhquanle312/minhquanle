@@ -64,7 +64,7 @@ const About = () => {
 
   const AboutBlock = ({ children, header }) => {
     return (
-      <div className='h-72 text-xl p-5 basis-1/3 lg:hover:basis-2/3 hover:border-2 hover:shadow-2xl rounded-2xl transition-all duration-[350ms]  overflow-ellipsis overflow-hidden'>
+      <div className='h-72 text-xl p-5 basis-1/3 lg:hover:basis-2/3 lg:hover:border-2 lg:hover:shadow-2xl rounded-2xl transition-all duration-[350ms]  overflow-ellipsis overflow-hidden'>
         <h3 className='text-3xl mb-3'>{header}</h3>
         {children}
       </div>

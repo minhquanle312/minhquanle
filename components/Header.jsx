@@ -80,14 +80,16 @@ const Header = () => {
         </a>
       </button>
       <div className='absolute top-2/3 left-1/2 -translate-x-1/2 sm:-translate-x-0 sm:left-10 md:top-20 md:left-6 flex gap-5'>
-        <button className='py-1 px-2 text-xs md:text-sm bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
-          <a href='/Intern_Frontend-Le_Phuc_Minh_Quan.pdf' download>
+        <Link href='/Intern_Frontend-Le_Phuc_Minh_Quan.pdf' download>
+          <a className='py-1 px-2 text-xs md:text-sm bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
             Download my CV
           </a>
-        </button>
-        <button className='py-1 px-2 text-xs md:text-sm bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
-          <Link href='/myCV'>My online CV</Link>
-        </button>
+        </Link>
+        <Link href='/myCV' className=''>
+          <a className='py-1 px-2 text-xs md:text-sm bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
+            My online CV
+          </a>
+        </Link>
       </div>
     </div>
   )

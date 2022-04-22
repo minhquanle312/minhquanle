@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
 import Circle from '../../components/Circle'
+import Icon from './../../components/Icon'
 
 const projects = [
   {
@@ -52,6 +54,26 @@ const index = () => {
       <Head>
         <title>CV - Intern Frontend - Lê Phúc Minh Quân</title>
       </Head>
+      <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
+        <div className='flex justify-between mx-16 md:mx-32 lg:mx-48 gap-20 items-center'>
+          <Link href='/' className=''>
+            <a className='rounded-md select-none'>
+              <Icon
+                iconName='arrow-up'
+                width='10'
+                height='10'
+                className='p-2 -rotate-90 fill-blue-500 hover:fill-blue-600 hover:scale-110'
+              />
+            </a>
+          </Link>
+          <Link href='/Intern_Frontend-Le_Phuc_Minh_Quan.pdf' download>
+            <a className='py-1 px-2 text-xs md:text-sm bg-orange-200 rounded-md text-slate-800 font-medium hover:bg-orange-400 hover:text-slate-200 transition-colors duration-150 select-none'>
+              Download PDF
+            </a>
+          </Link>
+        </div>
+      </nav>
+
       <div className='ml-16 md:ml-32 lg:ml-48'>
         <h1 className='mt-20 text-5xl font-medium tracking-wider'>
           LÊ PHÚC MINH QUÂN
