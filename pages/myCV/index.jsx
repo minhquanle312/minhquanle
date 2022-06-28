@@ -11,6 +11,7 @@ const projects = [
     teamSize: '5 (4 dev, 1 test)',
     role: 'Intern/fresher frontend developer (3 weeks traning and 5 week on project)',
     technologyIcons: ['ReactJS', 'PWA studio', 'React hooks'],
+    company: 'Simicart',
   },
   {
     name: 'Calendar',
@@ -19,6 +20,7 @@ const projects = [
     technologyIcons: ['react', 'firebase', 'html', 'sass'],
     demo: 'https://calendar-web-ui.vercel.app/',
     source: 'https://github.com/minhquanle312/calendar-web-ui',
+    isPersonal: true,
   },
   // {
   //   name: 'Order food',
@@ -35,6 +37,7 @@ const projects = [
     technologyIcons: ['html', 'css', 'javascript'],
     demo: 'https://minhquanle312.github.io/sudoku-solve/',
     source: 'https://github.com/minhquanle312/sudoku-solve',
+    isPersonal: true,
   },
   {
     name: 'Cryptography solve',
@@ -44,6 +47,7 @@ const projects = [
     technologyIcons: ['html', 'css', 'javascript'],
     demo: 'https://minhquanle312.github.io/kma_crypto_basic/',
     source: 'https://github.com/minhquanle312/kma_crypto_basic',
+    isPersonal: true,
   },
 ]
 
@@ -53,7 +57,7 @@ const index = () => {
       <Head>
         <title>CV - Intern Frontend - Lê Phúc Minh Quân</title>
       </Head>
-      <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
+      {/* <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
         <div className='flex justify-between mx-16 md:mx-32 lg:mx-48 gap-20 items-center'>
           <Link href='/' className=''>
             <a className='rounded-md select-none'>
@@ -71,7 +75,7 @@ const index = () => {
             </a>
           </Link>
         </div>
-      </nav>
+      </nav> */}
 
       <div className='ml-16 md:ml-32 lg:ml-48'>
         <h1 className='mt-20 text-5xl font-medium tracking-wider'>
@@ -107,7 +111,8 @@ const index = () => {
           <h2 className='text-3xl font-medium mb-6'>ABOUT</h2>
           <p className='text-lg'>
             I have finished my internship and want to start my career at your
-            company.
+            company. I&apos;m willing to learn new technology to accomplish the
+            requirements of the job.
           </p>
         </section>
         <section className='mb-20' id='experience'>
@@ -122,7 +127,9 @@ const index = () => {
               <Circle fill={index !== projects.length - 1} />
               <div>
                 <h3 className='text-xl mb-3'>
-                  <strong>{project.name}</strong> - Personal Project
+                  <strong>{project.name}</strong>
+                  {project.isPersonal ? ' - Personal Project' : ''}
+                  {project.company ? ` - ${project.company}` : ''}
                 </h3>
                 <p className='text-lg mb-3'>{project.description}</p>
                 {project.teamSize && (
