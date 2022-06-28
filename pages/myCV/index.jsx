@@ -20,14 +20,14 @@ const projects = [
     demo: 'https://calendar-web-ui.vercel.app/',
     source: 'https://github.com/minhquanle312/calendar-web-ui',
   },
-  {
-    name: 'Order food',
-    description: 'Order food web app with global state management.',
-    feature: 'add and delete food from card',
-    technologyIcons: ['react', 'html', 'sass'],
-    demo: 'https://react-food-app-gold.vercel.app/',
-    source: 'https://github.com/minhquanle312/react-food-app',
-  },
+  // {
+  //   name: 'Order food',
+  //   description: 'Order food web app with global state management.',
+  //   feature: 'add and delete food from card',
+  //   technologyIcons: ['react', 'html', 'sass'],
+  //   demo: 'https://react-food-app-gold.vercel.app/',
+  //   source: 'https://github.com/minhquanle312/react-food-app',
+  // },
   {
     name: 'Sudoku solve',
     description: 'Solve sudoku game with demo data input',
@@ -53,7 +53,7 @@ const index = () => {
       <Head>
         <title>CV - Intern Frontend - Lê Phúc Minh Quân</title>
       </Head>
-      {/* <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
+      <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
         <div className='flex justify-between mx-16 md:mx-32 lg:mx-48 gap-20 items-center'>
           <Link href='/' className=''>
             <a className='rounded-md select-none'>
@@ -71,7 +71,7 @@ const index = () => {
             </a>
           </Link>
         </div>
-      </nav> */}
+      </nav>
 
       <div className='ml-16 md:ml-32 lg:ml-48'>
         <h1 className='mt-20 text-5xl font-medium tracking-wider'>
@@ -106,7 +106,8 @@ const index = () => {
         <section className='my-20' id='about'>
           <h2 className='text-3xl font-medium mb-6'>ABOUT</h2>
           <p className='text-lg'>
-            I want to join your company as a Frontend Developer.
+            I have finished my internship and want to start my career at your
+            company.
           </p>
         </section>
         <section className='mb-20' id='experience'>
