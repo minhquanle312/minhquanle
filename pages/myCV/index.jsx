@@ -59,7 +59,7 @@ const index = () => {
       <Head>
         <title>CV - Intern Frontend - Lê Phúc Minh Quân</title>
       </Head>
-      {/* <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
+      <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
         <div className='flex justify-between mx-16 md:mx-32 lg:mx-48 gap-20 items-center'>
           <Link href='/' className=''>
             <a className='rounded-md select-none'>
@@ -77,7 +77,7 @@ const index = () => {
             </a>
           </Link>
         </div>
-      </nav> */}
+      </nav>
 
       <div className='ml-16 md:ml-32 lg:ml-48'>
         <h1 className='mt-20 text-5xl font-medium tracking-wider'>
