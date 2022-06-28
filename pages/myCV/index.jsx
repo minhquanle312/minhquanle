@@ -6,6 +6,13 @@ import Icon from './../../components/Icon'
 
 const projects = [
   {
+    name: 'Intern ReactJS',
+    description: 'Build e-commerce website with PWA studio (base on React)',
+    teamSize: '5 (4 dev, 1 test)',
+    role: 'Intern/fresher frontend developer (3 weeks traning and 5 week on project)',
+    technologyIcons: ['ReactJS', 'PWA studio', 'React hooks'],
+  },
+  {
     name: 'Calendar',
     description: 'Normal calendar with simple UI, easy to use.',
     feature: 'add and delete event, choose type of event, go to current day',
@@ -38,14 +45,6 @@ const projects = [
     demo: 'https://minhquanle312.github.io/kma_crypto_basic/',
     source: 'https://github.com/minhquanle312/kma_crypto_basic',
   },
-  // {
-  //   name: 'Aurora static web',
-  //   description: 'Static web use bootstrap',
-  //   feature: '',
-  //   technologyIcons: ['html', 'css', 'bootstrap'],
-  //   demo: 'https://aurora-grove.vercel.app/',
-  //   source: 'https://github.com/minhquanle312/aurora_grove',
-  // },
 ]
 
 const index = () => {
@@ -54,7 +53,7 @@ const index = () => {
       <Head>
         <title>CV - Intern Frontend - Lê Phúc Minh Quân</title>
       </Head>
-      <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
+      {/* <nav className='fixed top-0 left-0 w-full h-12 flex items-center z-10 bg-white'>
         <div className='flex justify-between mx-16 md:mx-32 lg:mx-48 gap-20 items-center'>
           <Link href='/' className=''>
             <a className='rounded-md select-none'>
@@ -72,7 +71,7 @@ const index = () => {
             </a>
           </Link>
         </div>
-      </nav>
+      </nav> */}
 
       <div className='ml-16 md:ml-32 lg:ml-48'>
         <h1 className='mt-20 text-5xl font-medium tracking-wider'>
@@ -107,7 +106,7 @@ const index = () => {
         <section className='my-20' id='about'>
           <h2 className='text-3xl font-medium mb-6'>ABOUT</h2>
           <p className='text-lg'>
-            I want to join your company as a Intern Frontend Developer.
+            I want to join your company as a Frontend Developer.
           </p>
         </section>
         <section className='mb-20' id='experience'>
@@ -125,14 +124,26 @@ const index = () => {
                   <strong>{project.name}</strong> - Personal Project
                 </h3>
                 <p className='text-lg mb-3'>{project.description}</p>
-                <p className='text-lg mb-3'>
-                  <span className='font-medium'>Demo:</span>{' '}
-                  <a href={project.demo}>{project.demo}</a>
-                </p>
-                <p className='text-lg mb-3'>
-                  <span className='font-medium'>Github repository:</span>{' '}
-                  <a href={project.source}>{project.source}</a>
-                </p>
+                {project.teamSize && (
+                  <p className='text-lg mb-3'>
+                    - Team size: {project.teamSize}
+                  </p>
+                )}
+                {project.role && (
+                  <p className='text-lg mb-3'>- Role: {project.role}</p>
+                )}
+                {project.demo && (
+                  <p className='text-lg mb-3'>
+                    <span className='font-medium'>Demo:</span>{' '}
+                    <a href={project.demo}>{project.demo}</a>
+                  </p>
+                )}
+                {project.source && (
+                  <p className='text-lg mb-3'>
+                    <span className='font-medium'>Github repository:</span>{' '}
+                    <a href={project.source}>{project.source}</a>
+                  </p>
+                )}
                 <p className='text-lg mb-10'>
                   <span className='font-medium'>Technologies:</span>{' '}
                   {project.technologyIcons.join(', ')}
